@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Hubs = require("./hubs/hubs-model.js");
+const hubsRouter = require('./hubs/hubs-router.js');
 
 const server = express();
 
@@ -12,6 +12,8 @@ server.get("/", (req, res) => {
     <p>Welcome to the Lambda Hubs API</p>
   `);
 });
+
+server.use('/api/hubs', hubsRouter);
 
 // export default server; // ES2015
 module.exports = server; // CommonJS module syntax
