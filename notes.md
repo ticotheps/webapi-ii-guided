@@ -1,0 +1,1 @@
+[client] -send a request => [server] -send a resopnse => [client]
